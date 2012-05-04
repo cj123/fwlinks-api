@@ -8,7 +8,7 @@ require "class.firmwarelinks-api.php";
 
 try {
 
-    $fwlinks = new FirmwareLinks();
+	$fwlinks = new FirmwareLinks();
 	$download_url = $fwlinks->getData("url", "iPod4,1", "4.1");
 
 	echo $download_url;
