@@ -1,9 +1,9 @@
 <?php
 
 	/**
-	* Firmware Links API for PHP
-	* (C) 2012 Callum Jones <cj@icj.me>
-	*/
+	 * Firmware Links API for PHP Example
+	 * (C) 2012 Callum Jones <cj@icj.me>
+	 */
 	class FirmwareLinks {
 
 		public function getData($request, $device, $buildid) {
