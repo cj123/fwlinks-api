@@ -10,7 +10,6 @@
 
 			// Validate user input
 			$r = new ReflectionMethod(__CLASS__, __FUNCTION__);
-			$args = array();
 			foreach ($r->getParameters() as $param) {
 				$name = $param->getName();
 				if (empty(${$name}))
