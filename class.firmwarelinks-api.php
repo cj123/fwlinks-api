@@ -38,7 +38,7 @@ class FirmwareLinks {
 
 		// Validate the cURL response
 		$response = get_headers($url, 1);
-		if($response[0] == "HTTP/1.1 200 OK")
+		if($response[0] == "HTTP/1.1 200 OK" || $response[0] == "HTTP/1.0 200 OK")
 			return $returned_data;
 		else
 			throw new Exception("Error: " . $response[0]);
