@@ -8,10 +8,16 @@
 require "class.firmwarelinks-api.php";
 
 try {
+	$fw = new firmwarelinks_api();
+	$download_url = $fw->firmware("url", "iPhone5,1", "7.1");
+	echo $download_url . "\n";
 
-	$fw = new FirmwareLinks();
-	$download_url = $fw->getData("url", "iPhone4,1", "5.1");
-	echo $download_url;
+	// device name test
+	echo $fw->firmware("name", "iPad3,2", "latest") . "\n";
+
+	// iTunes request
+
+	echo $fw->iTunes("url", "Windows", "earliest") . "\n";
 
 } catch (Exception $e) {
 	echo "Caught exception: " .  $e->getMessage() . "\n";
